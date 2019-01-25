@@ -11,14 +11,16 @@ let userSchema = new mongoose.Schema({
         type: String
     },
     birthday: {
-        type: String
+        type: Date
     },
     comments: [{
         date: {
-            type: String
+            type: Date,
+            default: new Date()
         },        
         message: {
-            type: String
+            type: String,
+            default: ''
         }
     }]
     
